@@ -31,3 +31,8 @@ Instead of relying on human-labelled data, self-supervised learning leverages th
 Autoencoding was employed, wherein the model learned to encode the input into a lower-dimensional representation by utilizing the same input for supervision. This allowed the model to capture salient features and patterns within the data. Furthermore, rotation prediction was employed, where the model learned to estimate the angle of rotation applied to an input. By leveraging self-supervised pre-training and multitasking, the model acquired a deeper understanding of the underlying structure of the data.
 
 ***Note***: Code, Network architecture and other details are in a separate repository.
+
+### Future work(or work  in progress)
+We can find pictures like those in a particular group of images, even if they don't have labels. We use a special model that changes images into numbers (vector embeddings). This model learns from pictures that do have labels, making it smarter. Then, we use this model to change the new, unlabeled images into numbers. We can see if these new numbers match the numbers from the labelled pictures. If they match well, the new pictures are similar to the ones in the group. We are creating a vector database for the particular dataset.
+finding unlabeled data images similar to the particular dataset with the help of its vector database using vector embedding
+vector embedding model finetuned on labelled data of a specific dataset and generated the vector embedding of that unlabelled test image to find whether it fits the distribution.
