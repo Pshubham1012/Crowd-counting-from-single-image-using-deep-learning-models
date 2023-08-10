@@ -15,19 +15,19 @@ Main problem; Scale variation
 
 To address these challenges, researchers have primarily focused on enhancing network architectures, devising customized loss functions, and exploring various learning approaches.
 ## Proposed Solutions and Strategies
-### Classification based Technique
+### Classification-based Technique
 The motivation behind adopting this approach lies in overcoming the scaling problem in crowd counting. The scaling problem refers to the substantial variations in crowd sizes observed within a single scene and across different scenes.
-So rather relying on multi-channel bulky models, a classifier was explored to determine the most suitable model for a given image based on its density.
+So rather than relying on multi-channel bulky models, a classifier was explored to determine the most suitable model for a given image based on its density.
 
-***Note*** : Code, Nework architecture, and other details are in seperate repo.
+***Note***: Code, Network architecture and other details are in a separate repository [here](https://github.com/Pshubham1012/Classification-approach/tree/main)
 
 ### Multiscale model
 Multiple regression heads were incorporated in parallel, akin to the MCNN model, and dilated convolution kernels were employed to reduce the additional parameters introduced by the extra layers. This modification resulted in a more robust and stable model capable of better crowd-counting performance.
 
-***Note***: Code, Nework architecture, and other details are in seperate repo.
+***Note***: Code, Network architecture and other details are in a separate repository.
 
-### Self supervised learning
+### Self-supervised learning
 Instead of relying on human-labelled data, self-supervised learning leverages the abundant unlabelled data that is often easier to obtain. The key idea is to design pretext tasks that require the model to learn valuable representations or predictive patterns from the data. These learned representations can then be transferred to downstream tasks or fine-tuned for specific tasks.
 Autoencoding was employed, wherein the model learned to encode the input into a lower-dimensional representation by utilizing the same input for supervision. This allowed the model to capture salient features and patterns within the data. Furthermore, rotation prediction was employed, where the model learned to estimate the angle of rotation applied to an input. By leveraging self-supervised pre-training and multitasking, the model acquired a deeper understanding of the underlying structure of the data.
 
-***Note***: Code, Nework architecture, and other details are in seperate repo.
+***Note***: Code, Network architecture and other details are in a separate repository.
